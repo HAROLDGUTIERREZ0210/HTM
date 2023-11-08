@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=splice">
+    <title>SPLICE</title>
+</head>
+<body>
+    <center>
+        <h1>METODO SPLICE ARRAYS</h1>
+        <h2>ELIMINAR ELEMENTOS</h2>
+        <br><br>
+        <p>EL NUEVO ARRAY ES:...</p>
+        <script>
+            let num;
+            let std=new Array();
+            // CAPTURA ARRAYS
+            num=parseInt(prompt("Ingrese cantidad  de elementos a ingresar a arrays.."));
+            for (i=0;i<num;i++){
+                std[i]=prompt("INGRESE DATO AL ARRAY"+i);
+            }
+            // LECTURA ARRAYS
+            let datob=prompt("INGRESE DATO A BORRAR");
+            let find=std.indexOf(datob.trim());
+            // INDICE DE BUSQUEDA
+            if (indice>-1){
+                var index=datos.splice(indice,1);
+                alert("ELEMENTO ELIMINADO... LISTA NUEVA..."+datos);
+            }
+            alert("ERROR ... NO SE ENCONTRO ELEMENTO"+datos);
+            document.write(datos+",");
+            console.log(datos);
+        </script>
+    </center>
+</body>
+</html>
