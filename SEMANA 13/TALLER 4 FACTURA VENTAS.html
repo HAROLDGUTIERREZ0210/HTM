@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA VENTAS | JAVASCRIPT</title>  
+    <meta charset="UTF-8">
+</head>
+<body>
+    <center>
+        <h1>CICLO REPETITIVO WHILE</h1>
+        <h2>FACTURA DE VENTAS</h2>
+        <br>
+        <script>
+            // Programa que permita capturar el nombre de productos, su precio unitario y su cantidad, 
+            // Luego calcular subtotal, descuento 10%, iva 19% y neto a pagar. Enviar mensaje Gracias por su compra //
+            var nombrep;
+            var suma= 0;
+            var subt= 0;
+            var netop= 0;
+            var desc= 0;
+            var iva= 0;
+            var num= 1;
+            var opc=true;
+            nom_std=prompt('Ingrese nombre del estudiante');
+            while (opc==true)
+            {
+                //
+                nombrep=prompt('Ingrese nombre del producto...'+num);
+                precio=parseFloat(prompt('Ingrese precio del producto a comprar...'+num));
+                cant=parseFloat(prompt('Ingrese la cantidad deseada a comprar...'+num));
+                opc=comfirm('Desea continuar facturanod.? --> [SI=ACPTAR / NO=CANCEL]');
+                //
+                subt = precio*cant;
+                suma += subt;
+                num ++;
+            }
+            //
+            desc=suma*0.10;
+            iva=(suma-desc)*0.19;
+            netop=suma-desc+iva;
+            //
+            document.write('*************************************************************************'+'<br>');
+            document.write('********************'+'ALMACEN MERKACOSTA'+'***************'+'<br>'+'<br>');
+            document.write('********************'+'SU FACTURA POS:'+'***************'+'<br>'+'<br>');
+            document.write('SUBTOTAL:  '+'<br>'+'<br>');
+            document.write(suma.toFixed(0) +'<br>'+'<br>');
+            document.write('DESCUENTO: '+'<br>'+'<br>');
+            document.write(desc.toFixed(0) +'<br>'+'<br>');
+            document.write('IVA:'+'<br>'+'<br>');
+            document.write(iva.toFixed(0)+'<br>'+'<br>');
+            document.write('NETO A PAGAR:'+'<br>'+'<br>');
+            document.write(netop.toFixed(0)+'<br>'+'<br>');
+            document.write('**************************'+'ATENDIDO POR: '+nom_std+'*************'+'<br>'+'<br>');
+            document.write('**************************'+'GRACIAS POR SU COMPRA: '+'**************'+'<br>');
+        </script>
+    </center>
+</body>
+</html>
